@@ -3,7 +3,7 @@ import type { TodoList } from '@/types/todo'
 import { appTitle } from '@/constants/app'
 
 export const useExportTodoList = () => {
-  const exportTodoListToOutputFormat = (todoList: TodoList) => {
+  const exportTodoListToOutputFormat = async (todoList: TodoList) => {
     const header = `# ${appTitle}`
     const content = todoList
       .map((todo) => {
@@ -20,7 +20,7 @@ export const useExportTodoList = () => {
 ${content}
 `
 
-    navigator.clipboard.writeText(output)
+    await navigator.clipboard.writeText(output)
   }
 
   return { exportTodoListToOutputFormat }

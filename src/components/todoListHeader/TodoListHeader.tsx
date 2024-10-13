@@ -18,6 +18,10 @@ type Props = {
 export const TodoListHeader: FC<Props> = ({ todoList }) => {
   const { exportTodoListToOutputFormat } = useExportTodoList()
 
+  const handleExportTodoList = async () => {
+    await exportTodoListToOutputFormat(todoList)
+  }
+
   return (
     <div className="grid grid-cols-[24px_auto_24px] justify-between">
       <div />
@@ -29,7 +33,9 @@ export const TodoListHeader: FC<Props> = ({ todoList }) => {
             disabled={!todoList.length}
             className="text-slate-700 dark:text-gray-400 dark:hover:text-blue-600"
             variant="text"
-            onClick={() => exportTodoListToOutputFormat(todoList)}
+            onClick={() => {
+              void handleExportTodoList()
+            }}
           >
             <CopyIcon className="mt-2 text-inherit transition-colors" />
           </Button>

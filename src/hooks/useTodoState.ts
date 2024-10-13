@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react'
 
 import type { Todo, TodoList } from '@/types/todo'
 
+import { parseTodoList } from '@/utils/parseTodoList'
 import { generateUuid } from '@/utils/uuid'
 
 import { useStorage } from './useStorage'
@@ -53,7 +54,7 @@ export const useTodoState = () => {
     const existingTodoList = getValue()
 
     if (existingTodoList) {
-      setTodoList(JSON.parse(existingTodoList))
+      setTodoList(parseTodoList(existingTodoList))
     }
   }, [getValue])
 
