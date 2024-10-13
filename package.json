@@ -1,8 +1,7 @@
 {
   "name": "get-it-done",
   "description": "A web-based todo list with focus on simplicity and productivity",
-  "private": true,
-  "version": "0.0.0",
+  "version": "1.0.0",
   "type": "module",
   "license": "MIT",
   "scripts": {
