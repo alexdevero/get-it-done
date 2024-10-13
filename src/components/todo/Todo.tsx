@@ -21,7 +21,7 @@ export const Todo: FC<Props> = ({
   onDelete,
   onTodoTextChange,
 }) => (
-  <div className="flex items-center justify-between gap-1">
+  <div className="flex items-center justify-between gap-1 border-b border-gray-600/25 py-1.5 last-of-type:border-0">
     <label
       htmlFor={todo.id}
       className="flex w-full items-center gap-2 dark:text-gray-400"

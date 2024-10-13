@@ -65,7 +65,7 @@ export const TodoList: FC = () => {
         )}
       </div>
 
-      <div className="flex flex-col gap-3">
+      <div className="flex flex-col">
         {todoList.map((todo) => (
           <Todo
             key={todo.id}

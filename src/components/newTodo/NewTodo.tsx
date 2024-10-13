@@ -20,10 +20,11 @@ export const NewTodo: FC<Props> = ({
   onChange,
   onKeyDown,
 }) => (
-  <div className="flex items-center gap-1">
+  <div className="mt-4 flex items-center gap-1">
     <textarea
-      className="h-7 min-h-7 w-full resize-y border-b border-gray-400/25 bg-transparent p-1 text-sm text-slate-600 transition-colors hover:border-blue-600 focus:border-blue-600 focus:outline-none dark:text-gray-300"
+      className="h-10 w-full resize-y border-b border-gray-400/25 bg-transparent px-1 py-1.5 text-sm text-slate-700 transition-colors placeholder:text-slate-700 hover:border-blue-600 focus:border-blue-600 focus:outline-none dark:text-gray-300"
       value={value}
+      placeholder="..."
       onChange={onChange}
       onKeyDown={onKeyDown}
     />
