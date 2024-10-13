@@ -10,6 +10,11 @@
   "importOrder": [
     "<THIRD_PARTY_MODULES>",
     "^[a-zA-Z]",
+    "^@/components",
+    "^@/hooks",
+    "^@/types",
+    "^@/utils",
+    "^@/constants",
     "^@/(?!styles/)",
     "^(?!.*\\.css$)\\.",
     "^(?!.*\\.css$)[./]",
